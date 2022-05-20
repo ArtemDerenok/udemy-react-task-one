@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import AppInfo from "./components/app-info/App-info";
+import SearchPanel from "./components/search-panel/Search-panel";
+import AppFilter from "./components/app-filter/App-filter";
+import EmployeesList from "./components/employees-list/Employees-list";
+import EmployeesAddForm from "./components/employees-add-form/Employees-add-form";
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+        <AppInfo />
+            <div className="search-panel">
+                <SearchPanel />
+                <AppFilter />
+            </div>
+        <EmployeesList />
+        <EmployeesAddForm />
     </div>
   );
 }
